@@ -1,11 +1,12 @@
 import React from 'react'
 import './Welcome.css'
+import { useState } from 'react'
 
 //importamos el NavLink para hacer uso de las rutas
 import { NavLink } from 'react-router-dom'
 
-export const Welcome = ({ ficha }) => {
-  
+export const Welcome = () => {
+  const[ficha, setFicha] = useState('2722493')
   
   return (
     

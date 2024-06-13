@@ -9,8 +9,11 @@ function App() {
   
   return (
     <>
-   
-        <Finances />
+  {/* Hacemos uso de las rutas en este caso para home que seria welcome y finances que es la pagina siguiente */}
+    <Routes>
+      <Route path='/' element={<Welcome />}/>
+      <Route path='/Finances' element={<Finances />}/>
+    </Routes>
       
     </>
   )

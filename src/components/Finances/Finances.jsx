@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import {ListFinances} from '../ListFinances/ListFinances'
+import { NavLink } from 'react-router-dom'
 
 
 export const Finances = () => {
@@ -28,7 +30,7 @@ export const Finances = () => {
   return (
     <div>
       <h1>Mis finanzas</h1>
-      <form onSubmit={(e) => e.preventDefault()}>
+      <form >
         <input 
           value={gasto}
           onChange={handleGastoChange}
@@ -49,9 +51,10 @@ export const Finances = () => {
 
         {/* Aqui con ayuda del map retorno cada producto que quiera agregar a la lista */}
         {gastosList.map((item, index) => (
-          <li key={index}>{item.gasto}: ${item.precio}</li>
+          <ListFinances key={index}>{item.gasto}: ${item.precio}</ListFinances>
         ))}
       </ul>
+      <NavLink to='/'>Regresar al inicio</NavLink>
     </div>
   )
 }
